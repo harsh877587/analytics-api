@@ -63,10 +63,15 @@ Event Type: click
 
 {
   "user_id": "user456",
+
   "event_type": "click",
+
   "payload": {
+
     "element_id": "btn-123",
+
     "text": "Click Me",
+
     "xpath": "/html/body/div[1]/button[1]"
   }
 }
@@ -74,10 +79,15 @@ Event Type: location
 
 {
   "user_id": "user789",
+
   "event_type": "location",
+
   "payload": {
+
     "latitude": 28.6139,
+
     "longitude": 77.2090,
+
     "accuracy": 15.5
   }
 }
@@ -86,16 +96,21 @@ Event Type: location
 {
   "message": "Event accepted"
 }
+
 ❌ Error Responses:
+
 400 Bad Request: Missing fields or invalid payload
 
 500 Internal Server Error: Server/database error
----
+
 2. 🔹 GET /analytics/event-counts
+
 Returns the total number of events, with optional filters.
 
 ✅ Method:
+
 GET /analytics/event-counts
+
 🔍 Optional Query Parameters:
 | Parameter   | Type   | Description                     |
 | ----------- | ------ | ------------------------------- |
@@ -106,21 +121,25 @@ GET /analytics/event-counts
 📥 Example Request:
 
 GET /analytics/event-counts?event_type=view&start_date=2025-05-01&end_date=2025-05-29
+
 ✅ Response:
 
 {
   "total_events": 1320
 }
 ❌ Error Response:
+
 400 Bad Request: Invalid query parameter format
 
 
 3. 🔹 GET /analytics/event-counts-by-type
+
 Returns the number of events grouped by event_type, with optional date filters.
 
 ✅ Method:
 
 GET /analytics/event-counts-by-type
+
 🔍 Optional Query Parameters:
 Parameter	Type	Description
 start_date	Date	Start date (e.g., 2025-05-01)
@@ -133,12 +152,17 @@ GET /analytics/event-counts-by-type?start_date=2025-05-01&end_date=2025-05-29
 ✅ Response:
 {
   "view": 1200,
+
   "click": 500,
+
   "location": 300
 }
+
 ✅ Empty Response Example (no matches):
+
 {}
 ❌ Error Response:
+
 400 Bad Request: Invalid date format
 
 📌 Summary of Endpoints
