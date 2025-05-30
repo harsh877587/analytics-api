@@ -36,6 +36,7 @@ POST /events
 | Content-Type | application/json |
 
 📥 Request Body Examples (JSON):
+---
 Event Type: view
 
 {
