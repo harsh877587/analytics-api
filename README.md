@@ -27,7 +27,7 @@ git clone https://github.com/devharshkumar24/analytics-api.git
 cd analytics-api
 npm install
 
-```bash
+```
 ---
 ## 📊 API Documentation
 
