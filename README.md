@@ -41,12 +41,17 @@ Event Type: view
 
 {
   "user_id": "user123",
+  ---
   "event_type": "view",
+  ---
   "payload": {
+    ---
     "url": "https://example.com",
+    ---
     "title": "Landing Page"
   }
 }
+---
 Event Type: click
 
 {
