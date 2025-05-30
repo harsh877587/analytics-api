@@ -20,8 +20,15 @@ The system collects, stores, and analyzes events such as `view`, `click`, and `l
 | Postman      | API testing                            |
 
 ---
+## 📦 Installation & Setup
 
+```bash
+git clone https://github.com/devharshkumar24/analytics-api.git
+cd analytics-api
+npm install
 
+```bash
+---
 ## 📊 API Documentation
 
 
@@ -36,22 +43,22 @@ POST /events
 | Content-Type | application/json |
 
 📥 Request Body Examples (JSON):
----
+
 Event Type: view
 
 {
   "user_id": "user123",
-  ---
+ 
   "event_type": "view",
-  ---
+ 
   "payload": {
-    ---
+    
     "url": "https://example.com",
-    ---
+    
     "title": "Landing Page"
   }
 }
----
+
 Event Type: click
 
 {
