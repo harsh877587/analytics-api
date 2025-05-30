@@ -21,26 +21,9 @@ The system collects, stores, and analyzes events such as `view`, `click`, and `l
 
 ---
 
-## 📦 Installation & Setup
-
-```bash
-git clone https://github.com/devharshkumar24/analytics-api.git
-cd analytics-api
-npm install
-
-
-Create .env file:
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/analytics
-
-Start MongoDB (via Compass or mongod), then run:
-npx nodemon server.js
-
-Generate Sample Data
-node scripts/generateEvents.js
----
 
 ## 📊 API Documentation
+
 
 1. 🔸 POST /events
 Ingests a new user activity event from a client (e.g., a web page or app).
@@ -151,3 +134,7 @@ GET /analytics/event-counts-by-type?start_date=2025-05-01&end_date=2025-05-29
 | `/events`                         | POST   | ❌          | ✅ Yes         | Accepts new user event       |
 | `/analytics/event-counts`         | GET    | ✅ Optional | ❌ No          | Total event count            |
 | `/analytics/event-counts-by-type` | GET    | ✅ Optional | ❌ No          | Grouped event counts by type |
+
+
+
+
