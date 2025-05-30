@@ -40,7 +40,7 @@ Generate Sample Data
 node scripts/generateEvents.js
 ---
 
-📊 API Documentation
+## 📊 API Documentation
 
 1. 🔸 POST /events
 Ingests a new user activity event from a client (e.g., a web page or app).
@@ -54,7 +54,7 @@ POST /events
 
 📥 Request Body Examples (JSON):
 Event Type: view
-```bash
+
 {
   "user_id": "user123",
   "event_type": "view",
@@ -64,7 +64,7 @@ Event Type: view
   }
 }
 Event Type: click
-```bash
+
 {
   "user_id": "user456",
   "event_type": "click",
@@ -75,7 +75,7 @@ Event Type: click
   }
 }
 Event Type: location
-```bash
+
 {
   "user_id": "user789",
   "event_type": "location",
@@ -86,7 +86,7 @@ Event Type: location
   }
 }
 ✅ Success Response:
-```bash
+
 {
   "message": "Event accepted"
 }
@@ -108,22 +108,22 @@ GET /analytics/event-counts
 | end\_date   | Date   | End date (e.g., `2025-05-29`)   |
 
 📥 Example Request:
-```bash
+
 GET /analytics/event-counts?event_type=view&start_date=2025-05-01&end_date=2025-05-29
 ✅ Response:
-```bash
+
 {
   "total_events": 1320
 }
 ❌ Error Response:
 400 Bad Request: Invalid query parameter format
 
-```bash
+
 3. 🔹 GET /analytics/event-counts-by-type
 Returns the number of events grouped by event_type, with optional date filters.
 
 ✅ Method:
-```bash
+
 GET /analytics/event-counts-by-type
 🔍 Optional Query Parameters:
 Parameter	Type	Description
@@ -131,7 +131,7 @@ start_date	Date	Start date (e.g., 2025-05-01)
 end_date	Date	End date (e.g., 2025-05-29)
 
 📥 Example Request:
-```bash
+
 GET /analytics/event-counts-by-type?start_date=2025-05-01&end_date=2025-05-29
 
 ✅ Response:
@@ -145,8 +145,6 @@ GET /analytics/event-counts-by-type?start_date=2025-05-01&end_date=2025-05-29
 ❌ Error Response:
 400 Bad Request: Invalid date format
 
-
----
 📌 Summary of Endpoints
 | Endpoint                          | Method | Filters?   | Body Required | Returns                      |
 | --------------------------------- | ------ | ---------- | ------------- | ---------------------------- |
